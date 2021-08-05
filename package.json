@@ -4,8 +4,8 @@
   "description": "Proyecto pagina usando node.js y jquery",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"lite-server"
+    "dev":"lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/naara1993/ejemplorestaurante.github.io/issues"
   },
-  "homepage": "https://github.com/naara1993/ejemplorestaurante.github.io#readme"
+  "homepage": "https://github.com/naara1993/ejemplorestaurante.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
 }
