@@ -4,7 +4,7 @@
   "description": "Proyecto pagina usando node.js y jquery",
   "main": "index.html",
   "scripts": {
-    "dev":"lite-server",
+    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,11 @@
   "homepage": "https://github.com/naara1993/ejemplorestaurante.github.io#readme",
   "dependencies": {
     "bootstrap": "^5.1.0",
+    "bootstrap-icons": "^1.5.0",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
   }
 }

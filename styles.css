@@ -1,0 +1,35 @@
+.imagen_de_fondo{
+  background: url("images/fondo7.jpg") no-repeat center top;
+   background-size: cover;
+   height: 100vh;
+}
+.nav1{
+margin: 1%;
+}
+.titulo{
+  color : white;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-style: italic;
+}
+.jum{
+  margin-top: 15%;
+}
+.logo{
+  margin: 4%;
+  padding-right: 4%;
+
+}
+.navbar-collapse{
+padding-left: 20%;
+}
+
+.parrafo2{
+  font-size: 20%;
+}
+.parrafo{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+}

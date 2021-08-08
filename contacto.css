@@ -1,0 +1,41 @@
+
+.logo{
+  margin: 4%;
+  padding-right: 4%;
+
+}
+#footer{
+  width: 80%;
+}
+.fondo{
+background-color: black;
+
+}
+
+.formulario{
+padding-top: 5%;
+}
+
+.navbar-collapse{
+padding-left: 20%;
+}
+.imagen{
+  background: url("images/restaurant-interior.jpg") no-repeat center top;
+   background-size: cover;
+height: 100vh;
+}
+.c{
+  margin-left: -1%;
+  height: 60%;
+}
+.co{
+padding-left: 20%;
+height: 60%;
+}
+.h1{
+  margin-left: -1%;
+}
+.red{
+  padding-top: 4%;
+margin-right: 8%;
+}
