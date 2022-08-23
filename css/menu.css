@@ -1,0 +1,259 @@
+
+
+/*general*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*body*/
+main{
+  background-color:#e2e8f0;
+}
+
+
+
+/*main*/
+
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding:50px;
+    
+}
+
+main nav {
+    flex-direction: column;
+    min-width: 250px;
+    width: 20%;
+    padding: 15px;
+    margin-top:35px;
+}
+
+main nav input {
+	padding: 0.5rem;
+	background: #e2e8f0;
+	border-radius: 5px;
+	border-color: black;
+	letter-spacing: 1px;
+}
+input[type="text"]::placeholder{
+  font-weight: bold;
+  color: black;
+}
+
+main nav h2 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.empresa-btn {
+	display: block;
+	margin: 0.25em 0;
+	padding: 0.25rem;
+	text-transform: capitalize;
+	background: transparent;
+	border-color: transparent;
+	letter-spacing: var(--letterSpacing);
+	color: var(--grey-500);
+	cursor: pointer;
+	transition: var(--transition);
+	font-size: 0.85rem;
+}
+
+main section {
+    flex-direction: column;
+    width: 80%;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main section article {
+    height: 234px;
+    width: 290px;
+    margin: 5px;
+    text-align: center;
+    margin-top:20%;
+}
+
+main section article img {
+    height: 190px;
+    width: 100%
+}
+
+.validar:active{
+  color:black;
+}
+.validar:focus{
+  color:black;
+  font-weight:bold;
+}
+
+/*nav*/
+.na{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.navbar-collapse{
+  padding-left: 20%;
+  }
+
+  #icono{
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px;
+  }
+  #icono:hover{
+    cursor: pointer;
+  }
+/*menu*/
+
+#img{
+  height:200px;
+}
+#misCategorias{
+  margin:15px;
+}
+
+/*modal*/
+.button-modal{
+  border:0px !important;
+  background-color:transparent !important;
+}
+.header-boton{
+  background-color: black;
+  display: flex;
+  justify-content:end;
+  align-items:end;
+  border-radius: 5px;
+  border-color:red;
+  margin-left: 0%;
+
+} 
+
+
+.body-modal{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0px;
+  padding-left: 0%;
+}
+.body-modal img{
+  height:50vh;
+  width:60%;
+}
+#cantidad{
+  border:1px solid rgba(0, 0, 0, 0.708);
+  border-radius: 10px;
+  width:50%;
+  padding-left: 10%;
+  margin-left: 15%;
+}
+.contenido-final{
+  padding-left: 9%;
+}
+ .m{
+  width: 100%;
+  height:86%;
+  background-color:rgba(255, 255, 255, 0.975);
+ }
+
+
+ .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+
+}
+.carousel-control-next-icon {
+
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+
+}
+
+/* formulario suscripcion*/
+.formulario{
+  padding-top: 4%;
+  }
+label{
+  font-weight: 600;
+}
+#suscripcion input[type="text"]{
+  border: 1px solid var(--colorBlanco);
+}
+#sus{
+background-color:black;
+}
+/*modal-articulo*/
+.modal-p{
+display: flex;
+justify-content:center;
+align-items:center;
+padding: 15px;
+position:fixed;
+top:65px;
+bottom:0px;
+left:190px;
+right:0px;
+height:70%;
+width:70%;
+visibility:hidden;
+opacity: 0;
+
+}
+.es-visible{
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+
+}
+
+  /* footer*/
+ footer{
+  width:100%;
+  padding: 30px;
+ }
+.contacto{
+padding: 10px;
+margin-right: 7%;
+  }
+  .lista{
+    margin-left: 25%;
+  }
+  .lista  li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--colorBlanco);
+    font-size: medium;
+  }
+  .lista2 li a{
+    text-decoration: none;
+    color:var(--colorBlanco);
+    font-size: medium;
+  }
+  ul li{
+    margin-left: 20px;
+  }
+  li a:hover{
+  font-weight: bold;
+  }
+  .contacto-suscripcion{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+    footer .divUno{
+display: flex;
+justify-content:center;
+align-items:center;
+    }

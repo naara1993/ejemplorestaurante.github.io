@@ -1,0 +1,104 @@
+
+/* principal y variables*/
+:root{
+  --colorAzul:rgba(9, 36, 244, 0.858);
+  --colorBlanco:rgba(255, 255, 255);
+  --colorNegro:rgba(0, 0, 0, 0.77);
+}
+
+
+.imagen_de_fondo{
+  background: url("../images/fondo7.jpg") no-repeat center top;
+   background-size: 100% 100%;
+   height: 100vh;
+}
+/*nav*/
+.user i{
+  font-size:small;
+}
+.user i:hover{
+  cursor: pointer;
+}
+.nav1{
+margin: 1%;
+}
+#icono{
+  color: white;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px;
+}
+#icono:hover{
+  cursor: pointer;
+}
+/*main*/
+.titulo{
+  color : white;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-style: italic;
+}
+.jum{
+  margin-top: 15%;
+}
+.logo{
+  margin: 4%;
+  padding-right: 4%;
+
+}
+.navbar-collapse{
+padding-left: 20%;
+}
+
+.parrafo2{
+  font-size: 20%;
+}
+.parrafo{
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+
+
+/**modal**/
+.modal1{
+  visibility: hidden;
+  position: fixed;
+  top:80px;
+  bottom:0px;
+  left:450px;
+  right:0px;
+  max-height: 530px;
+  width:500px;
+}
+.es-visible{
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+  background-color: var(--colorBlanco);
+}
+.modal-cerrar{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  height: 40px;
+  background-color: var(--colorNegro);
+}
+.modal-cerrar button{
+height:40px;
+}
+.modal-contenido{
+height:290px;
+
+}
+.modal-contenido img{
+  height:230px;
+  width:100%;
+}
+.quienes-somos{
+  padding: 20px;
+  font-size:small;
+}

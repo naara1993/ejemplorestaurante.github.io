@@ -1,0 +1,114 @@
+/*general y root*/
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root{
+  --colorAzul:rgba(9, 36, 244, 0.858);
+  --colorBlanco:rgba(255, 255, 255);
+  --colorNegro:#212529;
+}
+/*logo*/
+.logo{
+  margin: 4%;
+  padding-right: 4%;
+
+}
+/* formulario contacto*/
+.form{
+  padding-top:30px;
+}
+#form{
+  color: black;
+  background-color: #e2e8f0;
+}
+#contenedor{
+  background-color:#e2e8f0;
+}
+textarea{
+  height:200px !important;
+}
+/*imagen formulario */
+.imagen{
+  background: url("../images/restaurant-interior.jpg") no-repeat center top;
+   background-size: 100% 100%;
+   height: 100vh;
+   margin-top:7%;
+}
+
+.navbar-collapse{
+padding-left: 20%;
+}
+
+.c{
+  margin-left: -1%;
+  height: 60%;
+}
+.co{
+padding-left: 20%;
+height: 60%;
+}
+.h1{
+  margin-left: -1%;
+}
+.red{
+  padding-top: 4%;
+  margin-right: 8%;
+}
+
+/* formulario suscripcion*/
+.formulario{
+  padding-top: 4%;
+  }
+label{
+  font-weight: 600;
+}
+#suscripcion input[type="text"]{
+  border: 1px solid var(--colorBlanco);
+}
+#sus{
+background-color:black;
+}
+
+  /* footer*/
+ footer{
+  width:100%;
+  padding: 30px;
+ }
+.contacto{
+padding: 10px;
+margin-right: 7%;
+  }
+  .lista{
+    margin-left: 25%;
+  }
+  .lista  li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--colorBlanco);
+    font-size: medium;
+  }
+  .lista2 li a{
+    text-decoration: none;
+    color:var(--colorBlanco);
+    font-size: medium;
+  }
+  ul li{
+    margin-left: 20px;
+  }
+  li a:hover{
+  font-weight: bold;
+  }
+  .contacto-suscripcion{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  footer .divUno{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+        }

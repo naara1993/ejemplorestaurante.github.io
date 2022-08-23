@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- diseño responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/menu.css" />
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>Restaurante</title>
+  </head>
+  <body>
+    <!--------  header   ---------------->
+    <header class="row">
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./images/l.png"
+              width="110"
+              height="50"
+              class="logo d-inline-block align-text-top"
+              alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportContent"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportContent">
+            <div class="na navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Locales</a></li>
+            </div>
+          </div>
+        </div>
+        <div
+          class="user text-white d-flex justify-content-center align-content-center me-5"
+        >
+          <div>
+            <i id="icono" class="fa-solid fa-user me-5"> </i>
+          </div>
+          <div>
+            <a href="./carrito.html">
+              <i id="icono" class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-----seccion articulos-------->
+
+    <main>
+      <nav class="pt-3">
+        <input type="text" id="txtBuscar" placeholder="Consulte su producto" />
+        <h2 class="" class="mt-5">Menú</h2>
+        <div id="misCategorias"></div>
+      </nav>
+      <section id="misProductos"></section>
+    </main>
+
+    <!-------modal-articulo -------------------->
+    <div id="modal" class="modal-p">
+      <div class="m">
+        <div class="header-boton">
+          <button type="button" onclick="cerrar()" class="btn btn-dark" data-close="">
+            cerrar
+          </button>
+        </div>
+        <div id="agregarElemento" class="body-modal">
+
+        </div>
+      </div>
+    </div>
+
+    <!----------------- footer  --------------->
+
+    <footer class="bg-dark container-fluid">
+      <div class="row divUno">
+        <div class="col-md-4 col-lg-4 col-sm-4">
+          <ul class="list-unstyled lista text-white">
+            <li>
+              <a href="./index.html">home</a>
+            </li>
+            <li>
+              <a href="./menu.html">menu</a>
+            </li>
+            <li>
+              <a href="./contacto.html">contacto</a>
+            </li>
+            <li>
+              <a href="./locales.html">locales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-4">
+          <ul class="text-white list-unstyled p-3 lista2 contacto">
+            <li>
+              <a href="#!">
+                <i class="fa-solid fa-mobile-screen"></i>
+                4444-2222
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa-solid fa-envelope"></i>
+                rrrrr@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa-solid fa-map-location"></i>
+                local juan 3333
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4 col-sm-4">
+          <ul class="list-unstyled lista p-3 text-white">
+            <li>
+              <a href="./index.html">blog</a>
+            </li>
+            <li>
+              <a href="./menu.html">cupones</a>
+            </li>
+            <li>
+              <a href="./contacto.html">Reseña</a>
+            </li>
+            <li>
+              <a href="./locales.html">Opiniones</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row contacto-suscripcion mt-3">
+        <div class="col-md-4 col-lg-4 col-sm-4">
+          <div class="contenedor-redes-sociales d-flex mt-3">
+            <h5 class="text-uppercase text-white mb-3">
+              <i><b> Seguinos</b></i>
+            </h5>
+            <ul class="list-unstyled d-inline-flex ms-3">
+              <li class="pe-4">
+                <a href="#!" class="text-white">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li class="pe-4">
+                <a href="#!" class="text-white">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </li>
+              <li class="pe-4">
+                <a href="#!" class="text-white">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8 col-lg-6 col-sm-8">
+          <form action="" id="suscripcion">
+            <label for="suscribete" class="text-white pe-1"
+              ><u>
+                <b><i>Suscribite y recibe nuevas novedades</i></b>
+              </u>
+            </label>
+            <input
+              type="email"
+              placeholder="email"
+              required
+              autocomplete="on"
+            />
+            <button id="sus" class="btn btn-dark">suscribirse</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="./js/inventario.js"></script>
+    <script src="./js/cargarArticulos.js"></script>
+    <script src="./js/JQuery/jquery-3.6.0.min.js"></script>
+    <script src="./js/JQuery/Jquery.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d4827d7cda.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/d4827d7cda.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

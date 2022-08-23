@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.contenedor-carrito{
+  padding-top: 9%;
+  height: 100vh;
+  width: 100vh;
+  background-color:#e2e8f0;
+}
+.card-header{
+  color:white;
+  background-color:rgba(0, 0, 0, 0.845) !important;
+}
+.btn-outline-secondary{
+  margin-top:10px;
+  color:white !important;
+  background-color:rgba(0, 0, 0, 0.845) !important;
+}
+.my-3{
+  border:1px solid black !important;
+}
+.volver a {
+  text-decoration: none;
+  color: white;
+}
