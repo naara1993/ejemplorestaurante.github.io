@@ -26,3 +26,20 @@
   text-decoration: none;
   color: white;
 }
+#mostrarNotificacion  {
+  background-color: #729d38;
+    border-radius: 9px;
+    color: white;
+    display: inline-block;
+    line-height: 2;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 8px;
+    min-width: 24px;
+    height:30px;
+    padding: 1px 4px;
+    text-align: center;
+    -webkit-transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    vertical-align: middle;
+}

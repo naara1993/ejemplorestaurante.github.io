@@ -7,6 +7,30 @@
 }
 
 
+@font-face {
+  font-family: 'FuenteParrafos';
+  src: url(../fuentes/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Cursiva';
+  src: url(/fuentes/Courgette-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Titulos';
+  src: url(/fuentes/WalterTurncoat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Coure';
+  src: url('./fuentes/Courgette-Regular.ttf');
+}
+
+body{
+  font-family: 'Coure';
+}
+
 .imagen_de_fondo{
   background: url("../images/fondo7.jpg") no-repeat center top;
    background-size: 100% 100%;
@@ -101,4 +125,27 @@ height:290px;
 .quienes-somos{
   padding: 20px;
   font-size:small;
+}
+
+@media screen and (max-width: 800px){
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30%;
+  }
+}
+
+
+@media screen and (max-width: 425px){
+  main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50%;
+  }
+  .user{
+    width: 40%;
+    padding-top: 5%;
+  }
 }

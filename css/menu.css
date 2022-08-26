@@ -155,9 +155,8 @@ main section article img {
 #cantidad{
   border:1px solid rgba(0, 0, 0, 0.708);
   border-radius: 10px;
-  width:50%;
-  padding-left: 10%;
-  margin-left: 15%;
+  width:75%;
+  padding-left: 5%;
 }
 .contenido-final{
   padding-left: 9%;
@@ -257,3 +256,205 @@ display: flex;
 justify-content:center;
 align-items:center;
     }
+
+    #mostrarNotificacion  {
+      background-color: #729d38;
+        border-radius: 9px;
+        color: white;
+        display: inline-block;
+        line-height: 2;
+        font-size: 13px;
+        font-weight: bold;
+        margin-left: 8px;
+        min-width: 24px;
+        height:30px;
+        padding: 1px 4px;
+        text-align: center;
+        -webkit-transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+        transition: background-color 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+        vertical-align: middle;
+    }
+
+    @media screen and (max-width: 800px){
+      main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:30%;
+      }
+    }
+    
+    
+    @media screen and (max-width: 425px){
+      main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:50%;
+      }
+      .user{
+        width: 40%;
+        padding-top: 5%;
+      }
+    }  
+    @media screen and (max-width: 1240px){
+   main{
+    padding: 0px;
+    padding-top:10%;
+    display: flex;
+   }
+   main section article{
+    height: 250px;
+    width: 250px;
+    margin: 5px;
+    text-align: center;
+    margin-top: 25%;
+   }
+   .product-name{
+    font-size:small;
+   }
+   .product-price{
+    font-size:small;
+   }
+   main section {
+    flex-direction: column;
+    width: 70%;
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+    }
+
+    @media screen and (max-width: 1080px){
+      main{
+       padding: 0px;
+       padding-top:10%;
+       display: flex;
+      }
+      main section article{
+       height: 200px;
+       width: 200px;
+       margin: 5px;
+       text-align: center;
+       margin-top: 25%;
+      }
+      .product-name{
+       font-size:small;
+      }
+      .product-price{
+       font-size:small;
+      }
+      main section {
+       flex-direction: column;
+       width: 70%;
+       padding: 15px;
+   
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 10px;
+       padding-bottom: 20%;
+   }
+       }
+
+
+       @media screen and (max-width: 945px){
+        main{
+         padding: 0px;
+         padding-top:10%;
+         display: flex;
+        }
+        main section article{
+         height: 300px;
+         width: 250px;
+         margin: 5px;
+         text-align: center;
+         margin-top: 25%;
+        }
+        .product-name{
+         font-size:small;
+        }
+        .product-price{
+         font-size:small;
+        }
+        main section {
+         flex-direction: column;
+         width: 90%;
+         padding: 15px;
+     
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 10px;
+         padding-bottom: 20%;
+     }
+         }
+             
+    @media screen and (max-width: 800px){
+      main{
+        padding: 0px;
+        padding-top:10%;
+        margin:0px;
+        display:block;
+       }
+      main nav{
+        display:flex;
+        width: 100% !important;
+        margin-top:10%;
+
+       }
+      input[type="text"]{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-left: 20%;
+        text-align: center;
+       }
+       main nav h2 {
+        display: flex;
+      justify-content: center;
+       }
+       #misCategorias{
+        display: flex;
+        justify-content: center;
+
+       }
+       main section article{
+        height: 100%;
+        width: 100%;
+        margin: 5px;
+        text-align: center;
+        margin-top: 25%;
+       }
+       .product-name{
+        font-size:small;
+       }
+       .product-price{
+        font-size:small;
+       }
+       main section {
+        padding-bottom: 20%;
+        padding-left: 12%;
+    }
+    #misProductos{
+      
+    }
+    .user{
+      padding-top:20px;
+      margin-left:4%;
+      padding-bottom: 2px;
+    }
+
+    .contenedor-redes-sociales {
+font-size: small;
+margin-left: 15%;
+    }
+    #suscripcion{
+      margin-left:25%;
+      font-size: 85%;
+    }
+    ul li{
+      font-size: small;
+    }
+    }  

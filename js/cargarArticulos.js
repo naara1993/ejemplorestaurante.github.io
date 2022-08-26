@@ -34,7 +34,7 @@ function mostrarProductos(ev){
                 <img src="${proc.image}" class="product-img img" alt="">
                 <footer>
                 <h5 class="product-name">${proc.title}</h5>
-                <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}
+                <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}$
                 <button id="${proc.id}" onclick="mostrar(${proc.id})" class="button-modal"  data-open="modal">
                  <i  class="fa-solid fa-cart-shopping text-dark ms-3 "></i>
                 </button>
@@ -53,7 +53,7 @@ function mostrarProductos(ev){
             <img src="${proc.image}" class="product-img img" alt="">
             <footer>
             <h5 class="product-name">${proc.title}</h5>
-            <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}
+            <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}$
             <button id="${proc.id}" onclick="mostrar(${proc.id})" class="button-modal"  data-open="modal">
              <i  class="fa-solid fa-cart-shopping text-dark ms-3 "></i>
             </button>
@@ -73,7 +73,7 @@ txtBuscar.addEventListener('keyup', (ev) => {
         <img src="${proc.image}" class="product-img img" alt="">
         <footer>
         <h5 class="product-name">${proc.title}</h5>
-        <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}
+        <span class="product-price d-flex justify-content-center mt-2 ">${proc.price}$
         <button id="${proc.id}" onclick="mostrar()"  class="button-modal"  data-open="modal">
          <i  class="fa-solid fa-cart-shopping text-dark ms-3 "></i>
         </button>
@@ -84,11 +84,6 @@ txtBuscar.addEventListener('keyup', (ev) => {
     
     return;
 });
-
-
-
-
-
 
 /*modal*/
 
@@ -158,25 +153,23 @@ $.each(products,function(ind,valor,arr){
               class="d-flex justify-content-center align-item-center mt-4"
               action=""
             >
-              <label  for="cantidad">cantidad</label>
-              <input
-              onkeyup="porTeclado()"
-              onclick="porClick()"
-                min="0"
-                max="20"
-                type="number"
-                id="cantidad"
-                name="cantidad"
-                placeholder="cantidad"
-              />
+            <input title="ingresa la cantidad que quieres llevar" type="number" onkeyup="teclado()" name="cantidad" id="cantidad" min="1" placeholder="cantidad" value="1" max="10" />
+
+              <div class="ps-2" >
+              <label id="agregar"> 
+              ${valor.price}
+              </label>
+              $
+              <input type="hidden" id="precio" value="${valor.price}" />
+              </div>
             </form>
             <div class="mt-5 contenido-final">
-              <label id="precio" for="precio">${valor.price}</label>
-              <button class="button-modal">
-                <i class="fa-solid fa-cart-shopping text-dark ms-3">
-                <a  href="./carrito.html">Ir al carrito</a>
-                </i>
+              <button onclick="AgregarAlCarrito(${valor.id})" class="btn btn-dark">
+                  agregar al carrito
               </button>
+              <i class="fa-solid fa-cart-shopping text-dark ms-3">
+              <a   href="./carrito.html?IdProducto=${valor.id}">Ir al carrito</a>
+              </i>
             </div>
           </div>
         </div>
@@ -184,36 +177,10 @@ $.each(products,function(ind,valor,arr){
         `;
     }
 })
-// cantidad.addEventListener('keyup',function(ev){
-//   cantidadTotal =cantidad.val();
-//   total=valor.Precio*cantidadTotal;
-
-//   return cantidadTotal,total;
-// })
-
-
-// //click evento permite capturar lo que haga el usuario al hacer click
-// cantidad.on('click', function(ev){
-//    cantidadTotal =cantidad.val();
-//    total=valor.Precio*cantidadTotal;
-//    totalE.html(total);
-//    return cantidadTotal,total;
-//    })
 
 }
-function porTeclado(){
-  let precio=0;
-  let mostrarPrecio=document.getElementById('precio').innerHTML;
-  let cantidad=document.getElementById('cantidad').value; 
-  mostrarPrecio.innerHTML=mostrarPrecio*cantidad;
 
-}
-function porClick(){
-  let precio=0;
-  let mostrarPrecio=document.getElementById('precio')
-  let cantidad=document.getElementById('cantidad').value; 
-
-}
+//cargarModal
 function mostrar(id){
     const modalId=document.getElementById('modal');
     modalId.classList.add('es-visible');
@@ -227,3 +194,87 @@ function cerrar(){
 }
 
 
+//agregar al carrito 
+let carrito=[];
+let precioFinal;
+let contador=carrito.length
+let total=0;
+
+
+
+
+function teclado(){
+  let cantidad=document.getElementById('cantidad').value;
+  let precio=document.getElementById('precio').value;
+  let agregar=document.getElementById('agregar');
+  precio=document.getElementById('precio').value;
+  precioFinal=precio*cantidad;
+  total=precioFinal
+  agregar.innerHTML=`
+      ${precioFinal}
+  `
+}
+
+
+
+
+
+
+
+function AgregarAlCarrito(id)
+{ 
+  let cantidad=document.getElementById('cantidad').value;
+  let precioF=document.getElementById('agregar').innerHTML;
+  let arrayactual=products.find(x=>x.id==id);
+  carrito.push({id:arrayactual.id,title:arrayactual.title,company:arrayactual.company,
+  image:arrayactual.image,price:arrayactual.price,cantidad:cantidad,precioFinal:precioF,total:total});
+  GuardarenPc(carrito);
+  alert("agregado al carrito")
+  mostrarN(carrito.length);
+}
+let c=0;
+function mostrarN(contador){
+  let notificacion=document.getElementById('mostrarNotificacion');
+  notificacion.innerHTML='';
+  console.log(contador);
+  notificacion.append(`
+  ${contador}
+  `)
+}
+
+window.onload=function(){
+  $.each(carrito, function(ind,valor,arr){
+   c=c+1;
+  })
+this.mostrarN(c)
+}
+
+
+/*------------------------------------------------------------------*/
+//                      GUARDAR EN LOCALSTORAGE
+/*------------------------------------------------------------------*/
+
+function GuardarenPc(carrito)
+{
+    if(!window.localStorage.key('wCarritoCompra'))
+    {
+        window.localStorage.setItem('wCarritoCompra', JSON.stringify(carrito));
+    }
+    else
+    {
+        window.localStorage.setItem('wCarritoCompra', JSON.stringify(carrito));
+    }
+}
+
+function MostrarenPc()
+{
+        if(window.localStorage.getItem('wCarritoCompra') == null){
+            window.localStorage.setItem('wCarritoCompra', JSON.stringify(carrito));
+        }
+        if(window.localStorage.key('wCarritoCompra'))
+        {
+            carrito = JSON.parse(window.localStorage.getItem('wCarritoCompra'));
+        }
+}
+
+MostrarenPc();
